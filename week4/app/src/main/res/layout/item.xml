@@ -6,13 +6,13 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/itemImageView"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/itemTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 

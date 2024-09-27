@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -37,7 +38,45 @@ class MainActivity : AppCompatActivity() {
             img2.setImageResource(R.drawable.bhc)
         }
 
+        var buttonPizza = findViewById<Button>(R.id.buttonPizza)
+        var buttonHamburger = findViewById<Button>(R.id.buttonHamburger)
+        var buttonChicken = findViewById<Button>(R.id.buttonChicken)
+
+        var mainList = findViewById<ListView>(R.id.listView)
 
 
+        val pizzaItems = arrayListOf<Restaurant>()
+        val hamburgerItems = arrayListOf<Restaurant>()
+        val chickenItems = arrayListOf<Restaurant>()
+
+        pizzaItems.add(Restaurant(R.drawable.domino, "domino pizza"))
+        pizzaItems.add(Restaurant(R.drawable.pizzahut, "pizza hut"))
+        pizzaItems.add(Restaurant(R.drawable.pizzanarachickengongju, "pizza nara chicken gongju"))
+        val pizzaListAdapter = CustomAdapter(this, pizzaItems)
+
+        hamburgerItems.add(Restaurant(R.drawable.burgerking, "burgerking"))
+        hamburgerItems.add(Restaurant(R.drawable.mcdonalds, "mcdonalds"))
+        hamburgerItems.add(Restaurant(R.drawable.momstouch, "momstouch"))
+        hamburgerItems.add(Restaurant(R.drawable.lotteria, "lotteria"))
+        val hamburgerListAdapter = CustomAdapter(this, hamburgerItems)
+
+        chickenItems.add(Restaurant(R.drawable.bbq, "BBQ"))
+        chickenItems.add(Restaurant(R.drawable.bhc, "BHC"))
+        chickenItems.add(Restaurant(R.drawable.goobne, "goobne"))
+        chickenItems.add(Restaurant(R.drawable.pizzanarachickengongju, "pizza nara chicken gongju"))
+        val chickenListAdapter = CustomAdapter(this, chickenItems)
+
+        // Default list is Pizza
+        mainList.adapter = pizzaListAdapter
+
+        buttonPizza.setOnClickListener {
+            mainList.adapter = pizzaListAdapter
+        }
+        buttonHamburger.setOnClickListener {
+            mainList.adapter = hamburgerListAdapter
+        }
+        buttonChicken.setOnClickListener{
+            mainList.adapter = chickenListAdapter
+        }
     }
 }
