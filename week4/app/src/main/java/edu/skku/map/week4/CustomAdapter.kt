@@ -20,7 +20,7 @@ class CustomAdapter (val context: Context, val items: ArrayList<Restaurant>): Ba
 
     override fun getItemId(position: Int): Long {
         return 0
-    }g
+    }
 
     override fun getView(postition: Int, converView: View?, parent: ViewGroup?): View{
         val inflater: LayoutInflater = LayoutInflater.from(context)
