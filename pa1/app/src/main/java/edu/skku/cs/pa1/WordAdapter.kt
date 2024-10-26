@@ -34,18 +34,20 @@ class WordAdapter(val context: Context, val items: ArrayList<Word>) : BaseAdapte
             view.findViewById(R.id.wordText5)
         )
 
+
         val word: String = items[p0].word.uppercase()
         val result: MutableList<Int> = items[p0].result
+
         for (i in word.indices) {
             textViews[i].text = word[i].toString()
             if(result[i]==0){
-                textViews[i].setBackgroundColor(Color.parseColor("#FF787C7E"))
+                textViews[i].setBackgroundColor(ContextCompat.getColor(context, R.color.gray))
                 textViews[i].setTextColor(ContextCompat.getColor(context, R.color.white))
             }else if(result[i]==1){
-                textViews[i].setBackgroundColor(Color.parseColor("#FFFFE46F"))
+                textViews[i].setBackgroundColor(ContextCompat.getColor(context, R.color.yellow))
                 textViews[i].setTextColor(ContextCompat.getColor(context, R.color.black))
             }else{
-                textViews[i].setBackgroundColor(Color.parseColor("#FF99F691"))
+                textViews[i].setBackgroundColor(ContextCompat.getColor(context, R.color.green))
                 textViews[i].setTextColor(ContextCompat.getColor(context, R.color.black))
             }
         }

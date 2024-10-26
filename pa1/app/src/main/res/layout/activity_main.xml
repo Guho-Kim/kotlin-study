@@ -37,7 +37,7 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Wordle"
-        android:inputType="text"
+        android:inputType="textNoSuggestions|text"
         app:layout_constraintBottom_toTopOf="@id/wordList"
         app:layout_constraintEnd_toStartOf="@id/buttonSubmit"
         app:layout_constraintStart_toStartOf="parent"
