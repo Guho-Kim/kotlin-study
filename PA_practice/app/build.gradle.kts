@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "edu.skku.map.pa_practice"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "edu.skku.map.pa_practice"
@@ -32,6 +32,16 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    sourceSets {
+        getByName("main") {
+            assets {
+                srcDirs("src\\main\\assets", "src\\assets",
+                    "src\\main\\assets",
+                    "src\\main\\assets"
+                )
+            }
+        }
     }
 }
 
