@@ -8,5 +8,6 @@ data class Restaurant(
     val open_time: String,
     val close_time: String,
     val reservation_user: List<Reservation>,
-    val menu: List<Menu>
+    val menu: List<Menu>,
+    val description: String
 )

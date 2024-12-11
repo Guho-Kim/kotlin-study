@@ -8,7 +8,7 @@
     tools:context=".Activity4">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/restaurant_name"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Restaurants"
@@ -23,40 +23,40 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/textView1"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_name"
         >
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ID"
+            android:text="People"
             android:textSize="18sp"
             />
         <EditText
-            android:id="@+id/input_id"
-            android:layout_width="100dp"
+            android:id="@+id/number_of_people"
+            android:layout_width="150dp"
             android:layout_height="50dp"
-            android:hint="id"
-            android:inputType="text"
+            android:inputType="number"
             android:textAlignment="textEnd"
             />
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="Date"
             android:textSize="18sp"
             />
         <EditText
-            android:id="@+id/input_password"
-            android:layout_width="100dp"
+            android:id="@+id/reservation_date"
+            android:layout_width="150dp"
             android:layout_height="50dp"
-            android:hint="password"
-            android:inputType="textPassword"
+            android:inputType="none"
+            android:focusable="false"
+            android:cursorVisible="false"
             android:textAlignment="textEnd"
-            />
 
+            />
     </LinearLayout>
     <Button
         android:id="@+id/confirm_btn"

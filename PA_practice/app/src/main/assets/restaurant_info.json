@@ -4,8 +4,9 @@
     "restaurant_name": "Burgerking",
     "location": "suwon",
     "rating": 5,
-    "open_time": "10:00",
-    "close_time": "21:00",
+    "open_time": "00:00",
+    "close_time": "24:00",
+    "description": "Burgerking offers a variety of flame-grilled burgers, crispy fries, and refreshing drinks in a cozy setting. Perfect for families and quick bites.",
     "reservation_user": [
       {
         "user_id": "user1",
@@ -42,6 +43,7 @@
     "rating": 5,
     "open_time": "10:00",
     "close_time": "21:00",
+    "description": "McDonald's serves classic fast-food favorites like Big Mac, crispy fries, and refreshing beverages. Ideal for quick meals and family outings.",
     "reservation_user": [
       {
         "user_id": "user1",
@@ -76,8 +78,9 @@
     "restaurant_name": "TwoSome!",
     "location": "seoul",
     "rating": 5,
-    "open_time": "10:00",
-    "close_time": "21:00",
+    "open_time": "11:00",
+    "close_time": "22:00",
+    "description": "TwoSome! specializes in premium coffee, delightful cakes, and a relaxed atmosphere, making it a great spot for catching up with friends or enjoying a quiet moment.",
     "reservation_user": [
       {
         "user_id": "user1",

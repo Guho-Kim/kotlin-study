@@ -10,7 +10,7 @@ import android.widget.TextView
 import edu.skku.map.pa_practice.R
 import edu.skku.map.pa_practice.model.Menu
 
-class MenusAdapter(val data:ArrayList<Menu>, val context: Context): BaseAdapter(){
+class MenuAdapter(val data:ArrayList<Menu>, val context: Context): BaseAdapter(){
     override fun getCount(): Int {
         return data.size
     }

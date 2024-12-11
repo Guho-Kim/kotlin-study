@@ -2,6 +2,7 @@ package edu.skku.map.pa_practice
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import edu.skku.map.pa_practice.model.User
+import java.time.LocalTime
+import java.util.TimeZone
 
 class Activity0 : AppCompatActivity() {
     companion object{
@@ -17,10 +20,18 @@ class Activity0 : AppCompatActivity() {
         const val EXT_USER_AGE = "extra_key_user_age"
         const val EXT_USER_GENDER = "extra_key_user_gender"
         const val EXT_RESTAURANT_ID = "extra_key_restaurant_id"
+        const val EXT_RESTAURANT_NAME = "extra_key_restaurant_name"
+        const val EXT_RESTAURANT_OPENING_HOURS = "extra_key_restaurant_opening_hours"
+        const val EXT_RESERVATION_DATE = "extra_key_reservation_date"
+        const val EXT_RESERVATION_TIME = "extra_key_reservation_time"
+        const val EXT_RESERVATION_PEOPLE = "extra_key_reservation_people"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_0)
+
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"))
+
 
         val idInput = findViewById<EditText>(R.id.input_id)
         val passwordInput = findViewById<EditText>(R.id.input_password)

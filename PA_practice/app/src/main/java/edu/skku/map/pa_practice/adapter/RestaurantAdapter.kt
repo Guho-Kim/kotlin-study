@@ -9,8 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import edu.skku.map.pa_practice.R
 import edu.skku.map.pa_practice.model.Restaurant
+import edu.skku.map.pa_practice.utils.logoUtil
 
-class RestaurantsAdapter(val data:ArrayList<Restaurant>, val context: Context):BaseAdapter(){
+class RestaurantAdapter(val data:ArrayList<Restaurant>, val context: Context):BaseAdapter(){
     override fun getCount(): Int {
         return data.size
     }
@@ -36,7 +37,8 @@ class RestaurantsAdapter(val data:ArrayList<Restaurant>, val context: Context):B
         locationRating.text = data[p0].location + " / " + data[p0].rating
         openCloseTime.text = data[p0].open_time + " ~ " + data[p0].close_time
 
-        logo.setImageResource(R.drawable.default_air_logo)
+        val logoResource = logoUtil.getLogoResource(data[p0].restaurant_name)
+        logo.setImageResource(logoResource)
 
         return generatedView
     }
