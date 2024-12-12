@@ -83,7 +83,7 @@ tools:context=".Activity0">
     android:layout_height="50dp"
     android:text="Login"
     app:cornerRadius="8dp"
-    android:layout_margin="5dp"
+    android:layout_margin="10dp"
     app:layout_constraintBottom_toBottomOf="parent"
     />
 

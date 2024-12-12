@@ -85,6 +85,10 @@ class Activity5 : AppCompatActivity() {
             editor.apply()
 
 
+//            FLAG_ACTIVITY_CLEAR_TOP:
+//            목적지(Activity1)가 이미 스택에 존재하면, 그 위에 있는 모든 Activity를 제거하고 목적지를 맨 위로 가져옵니다.
+//            FLAG_ACTIVITY_SINGLE_TOP:
+//            목적지(Activity1)가 스택 맨 위에 이미 존재하는 경우 새로 생성하지 않고 기존 Activity를 재사용합니다
             val intent = Intent(this@Activity5, Activity1::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             }

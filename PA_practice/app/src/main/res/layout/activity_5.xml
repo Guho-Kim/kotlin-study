@@ -113,18 +113,20 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_weight="1"
-        android:text="cancle"
         app:cornerRadius="8dp"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
+        android:text="cancle"
+
         />
     <Button
         android:id="@+id/confirm_btn"
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="50dp"
-        android:text="confirm"
+        android:layout_weight="1"
         app:cornerRadius="8dp"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
+        android:text="confirm"
+
         />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
